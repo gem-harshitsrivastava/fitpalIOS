@@ -1,0 +1,26 @@
+name: CICD prod build
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build_appbundle:
+    name: Build & Release (Android)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - run: flutter pub get
+      - run: flutter clean
+      - run: flutter build appbundle -t lib/main_prod.dart
+      - run: flutter build apk -t lib/main_dev.dart  --release --split-per-abi
+      - name: Push To Releases
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/debug/*"
+          tags: v1.0.${{github.run_number}}

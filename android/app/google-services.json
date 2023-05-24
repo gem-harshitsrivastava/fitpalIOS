@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1024012544929",
+    "project_id": "gemfitpal-c1978",
+    "storage_bucket": "gemfitpal-c1978.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024012544929:android:e8625b6cb1ba1b8e9db9e0",
+        "android_client_info": {
+          "package_name": "com.example.gem_fitpal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024012544929-9jo087o95fsctfm4o7e6v3jm7p4hhaud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0wqC_gNhlkK0pihJ0EJ8qDpva4V1-K44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1024012544929-9jo087o95fsctfm4o7e6v3jm7p4hhaud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
